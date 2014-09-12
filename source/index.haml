@@ -1,0 +1,110 @@
+
+%nav
+  %h1 XAUN LOPEZ
+  %ul
+    / %li
+    /   %a{:href => "#"} About
+    %li
+      %a{:href => "#", :id => 'projects-link'} Projects
+    %li
+      %a{:href => "#", :id => 'contact-link'} Contact
+
+#main-container
+  #margin-container
+    #about
+      #section.about-margin
+        %p Passionate about coding, audio & the future of technology.
+        %p From interactive applications, to database design. I want to build technologies that either inspire people, or make their lives easier. I want to be in an environment where I can work across the Full Stack.
+
+        %p
+          %span Currently available for work in Sydney.
+
+  #projects
+    #storebuilder-description
+      %h3 Store Builder
+      %p Store Builder (for lack of a better name), is a tool that allows you to build & manage your own online store.
+      %p Add & edit products, manage orders, add staff members, and send your store live into a responsive single-page application that features cart items & guest information caching, and checkout. (Payment gateway not implemented yet).
+      %p
+        %small Ruby 50.1% | JavaScript 16.8% | CSS 33.1%
+      %a{:href => "http://store-builder.herokuapp.com"}
+        %div{:class => 'btn btn-1'} Build A Store
+      %a{:href => "http://store-builder.herokuapp.com/stores/1"}
+        %div{:class => 'btn btn-2'} Store Example 1
+      / %a{:href => "http://store-builder.herokuapp.com"}
+      /   %div{:class => 'btn btn-3'} Store Example 2
+      %a{:href => "http://github.com/xaun/store-builder"}
+        %div{:class => 'btn btn-4'} Github Code
+
+
+      #storebuilder-carousel.carousel
+        %img{:src => "/images/storebuilder-image5.png", :class => 'active'}/
+        %img{:src => "/images/storebuilder-image1.png"}/
+        %img{:src => "/images/storebuilder-image2.png"}/
+        %img{:src => "/images/storebuilder-image3.png"}/
+        %img{:src => "/images/storebuilder-image7.png"}/
+        %img{:src => "/images/storebuilder-image4.png"}/
+        %img{:src => "/images/storebuilder-image6.png"}/
+        %img{:src => "/images/storebuilder-image8.png"}/
+      %img{:src => "/images/arrow1.png", :class => 'carousel-arrow', :data => { :carousel => '#storebuilder-carousel'}}/
+
+    #threedee-description
+      %h3 Threedee
+      %p Threedee is an Interactive 3D visualiser built with Three.JS & the Web Audio API.
+      %p Featuring customisable graphical settings, mp3 drag & drop, and Soundcloud URL link.
+      %p
+        %small Ruby 20.9% | JavaScript 67.6% | CSS 11.5%
+      %a{:href => "http://tadx-threedee.herokuapp.com"}
+        %div{:class => 'btn btn-1'} Experience Here
+      %a{:href => "http://github.com/xaun/threedee"}
+        %div{:class => 'btn btn-4'} Github Code
+
+
+      #threedee-carousel.carousel
+        %img{:src => "/images/threedee-image1.png", :class => 'active'}/
+        %img{:src => "/images/threedee-image4.png"}/
+        %img{:src => "/images/threedee-image7.png"}/
+        %img{:src => "/images/threedee-image6.png"}/
+        %img{:src => "/images/threedee-image5.png"}/
+        %img{:src => "/images/threedee-image3.png"}/
+        %img{:src => "/images/threedee-image2.png"}/
+      %img{:src => "/images/arrow1.png", :class => 'carousel-arrow', :data => {:carousel => '#threedee-carousel'}}/
+
+    #cloudchaser-description
+      %h3 CloudChaser
+      %p CloudChaser is a Soundclound player for Music & Podcasts.
+      %p Search for tracks, or artists, and save to your offline stash!
+      %p
+        %small Ruby 77.3% | JavaScript 5.1% | CSS 17.6%
+      %a{:href => "http://cloudchaser.herokuapp.com/"}
+        %div{:class => 'btn btn-1'} Listen Here
+      %a{:href => "http://https://github.com/xaun/soundcloudplayer/"}
+        %div{:class => 'btn btn-4'} Github Code
+
+      #cloudchaser-carousel.carousel
+        %img{:src => "/images/cloudchaser-image3.png", :class => 'active'}/
+        %img{:src => "/images/cloudchaser-image1.png"}/
+        %img{:src => "/images/cloudchaser-image2.png"}/
+        %img{:src => "/images/cloudchaser-image4.png"}/
+      %img{:src => "/images/arrow1.png", :class => 'carousel-arrow', :data => {:carousel => '#cloudchaser-carousel'}}/
+
+    %footer
+      #contact-links
+        %ul
+          %a{:href => "http://au.linkedin.com/in/xaunlopez"}
+            %li
+              %img{:src => "/images/linkedin.png", :alt => "linkedin"}/
+          %a{:href => "https://github.com/xaun"}
+            %li
+              %img{:src => "/images/github.png", :alt => "github"}/
+          %a{:href => "https://twitter.com/xaunlopez"}
+            %li
+              %img{:src => "/images/twitter.png", :alt => "twitter"}/
+          %a{:href => "mailto:xaunlopez@gmail.com?Subject=You%27re%20Awesome!"}
+            %li
+              %img{:src => "/images/email.png", :alt => "email"}/
+
+
+%script{:src => "javascripts/jquery-2.1.1.min.js"}
+%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Poiret+One"}/
+%link{:rel => "stylesheet", :href => "stylesheets/bootstrap.min.css"}/
+
