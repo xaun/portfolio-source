@@ -72,28 +72,32 @@ a {
   }
 }
 
-@mixin project-images {
-  display: inline-block;
+@mixin carousel {
+  position: relative;
+  overflow: hidden;
+  width: 750px;
+  height: 415px;
+  margin: auto;
+}
+
+@mixin carousel-images {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 750px;
   height: auto;
-  padding: 7px;
-  margin-bottom: 40px;
-  border: 5px solid black;
+  border: 7px solid black;
   border-radius: 10px;
 
 
   @include respond-to(max-width, 990px) {
-    // display: block;
-    // margin: auto;
   }
   @include respond-to(max-width, 780px) {
-    // height: 300px;
   }
   @include respond-to(max-width, 690px) {
-    // height: 270px;
   }
   @include respond-to(max-width, 510px) {
-    // height: 230px;
   }
 }
 
@@ -129,69 +133,44 @@ a {
     background-color: rgb(143, 166, 112);
   }
 
+  .carousel-arrow {
+    position: absolute;
+    right: 270px;
+    top: 407px;
+    cursor: pointer;
+  }
+
+  .arrow-1 {
+    top: 427px;
+  }
+
 
   #storebuilder-description {
     position: relative;
     border-bottom: 1px solid black;
     padding-bottom: 20px;
 
-    @include respond-to(max-width, 990px) {
-
-    }
-
-
     #storebuilder-carousel {
-      position: relative;
-      overflow: hidden;
-      width: 750px;
-      height: 415px;
-      margin: auto;
+      @include carousel;
 
       img {
-        // @include project-images;
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 750px;
-        height: auto;
-        border: 5px solid black;
-        border-radius: 10px;
+        @include carousel-images;
       }
     }
 
   }
-  .carousel-arrow {
-    position: absolute;
-    right: 270px;
-    top: 386px;
-    cursor: pointer;
-  }
-
 
 
   #threedee-description {
     position: relative;
     border-bottom: 1px solid black;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 
       #threedee-carousel {
-      position: relative;
-      overflow: hidden;
-      width: 750px;
-      height: 415px;
-      margin: auto;
+      @include carousel;
 
       img {
-        // @include project-images;
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 750px;
-        height: auto;
-        border: 5px solid black;
-        border-radius: 10px;
+        @include carousel-images;
       }
     }
   }
@@ -199,25 +178,13 @@ a {
   #cloudchaser-description {
     position: relative;
     border-bottom: 1px solid black;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 
       #cloudchaser-carousel {
-      position: relative;
-      overflow: hidden;
-      width: 750px;
-      height: 415px;
-      margin: auto;
+      @include carousel;
 
       img {
-        // @include project-images;
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 750px;
-        height: auto;
-        border: 5px solid black;
-        border-radius: 10px;
+        @include carousel-images;
       }
     }
   }
