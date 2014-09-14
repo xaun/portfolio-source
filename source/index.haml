@@ -14,7 +14,7 @@
     #about
       #section.about-margin
         %p Passionate about coding, audio & the future of technology.
-        %p From interactive applications, to database design. I want to build technologies that either inspire people, or make their lives easier. I want to be in an environment where I can work across the Full Stack.
+        %p From interactive applications, to database design. I want to build technologies that either inspire people, or make their lives easier.
 
         %p
           %span Currently available for work in Sydney.
@@ -34,18 +34,19 @@
       /   %div{:class => 'btn btn-3'} Store Example 2
       %a{:href => "http://github.com/xaun/store-builder"}
         %div{:class => 'btn btn-4'} Github Code
+      %br/
+      %span{:style => 'color: grey; font-size: 12px; padding-bottom: 10px;'} Click on image!
 
-
-      #storebuilder-carousel.carousel
-        %img{:src => "/images/storebuilder-image5.png", :class => 'active'}/
-        %img{:src => "/images/storebuilder-image1.png"}/
-        %img{:src => "/images/storebuilder-image2.png"}/
-        %img{:src => "/images/storebuilder-image3.png"}/
-        %img{:src => "/images/storebuilder-image7.png"}/
-        %img{:src => "/images/storebuilder-image4.png"}/
-        %img{:src => "/images/storebuilder-image6.png"}/
-        %img{:src => "/images/storebuilder-image8.png"}/
-      %img{:src => "/images/arrow1.png", :class => 'carousel-arrow arrow-1', :data => { :carousel => '#storebuilder-carousel'}}/
+      .carousel-container
+        #storebuilder-carousel.carousel
+          %img{:src => "/images/storebuilder-image1.png", :class => 'active', :data => { :carousel => '#storebuilder-carousel'}}/
+          %img{:src => "/images/storebuilder-image2.png", :data => { :carousel => '#storebuilder-carousel'}}/
+          %img{:src => "/images/storebuilder-image3.png", :data => { :carousel => '#storebuilder-carousel'}}/
+          %img{:src => "/images/storebuilder-image7.png", :data => { :carousel => '#storebuilder-carousel'}}/
+          %img{:src => "/images/storebuilder-image4.png", :data => { :carousel => '#storebuilder-carousel'}}/
+          %img{:src => "/images/storebuilder-image6.png", :data => { :carousel => '#storebuilder-carousel'}}/
+          %img{:src => "/images/storebuilder-image8.png", :data => { :carousel => '#storebuilder-carousel'}}/
+      %div{:class => 'btn btn-5', :data => {:next_element_id => '#threedee-description'}} Next Project
 
     #threedee-description
       %h3 Threedee
@@ -57,17 +58,18 @@
         %div{:class => 'btn btn-1'} Rave Here
       %a{:href => "http://github.com/xaun/threedee"}
         %div{:class => 'btn btn-4'} Github Code
-
+      %br/
+      %span{:style => 'color: grey; font-size: 12px; padding-bottom: 10px;'} Click on image!
 
       #threedee-carousel.carousel
-        %img{:src => "/images/threedee-image1.png", :class => 'active'}/
-        %img{:src => "/images/threedee-image4.png"}/
-        %img{:src => "/images/threedee-image7.png"}/
-        %img{:src => "/images/threedee-image6.png"}/
-        %img{:src => "/images/threedee-image5.png"}/
-        %img{:src => "/images/threedee-image3.png"}/
-        %img{:src => "/images/threedee-image2.png"}/
-      %img{:src => "/images/arrow1.png", :class => 'carousel-arrow arrow-2', :data => {:carousel => '#threedee-carousel'}}/
+        %img{:src => "/images/threedee-image1.png", :class => 'active', :data => { :carousel => '#threedee-carousel'}}/
+        %img{:src => "/images/threedee-image4.png", :data => { :carousel => '#threedee-carousel'}}/
+        %img{:src => "/images/threedee-image7.png", :data => { :carousel => '#threedee-carousel'}}/
+        %img{:src => "/images/threedee-image6.png", :data => { :carousel => '#threedee-carousel'}}/
+        %img{:src => "/images/threedee-image5.png", :data => { :carousel => '#threedee-carousel'}}/
+        %img{:src => "/images/threedee-image3.png", :data => { :carousel => '#threedee-carousel'}}/
+        %img{:src => "/images/threedee-image2.png", :data => { :carousel => '#threedee-carousel'}}/
+      %div{:class => 'btn btn-5', :data => {:next_element_id => '#cloudchaser-description'}} Next Project
 
     #cloudchaser-description
       %h3 CloudChaser
@@ -79,13 +81,15 @@
         %div{:class => 'btn btn-1'} Listen Here
       %a{:href => "http://https://github.com/xaun/soundcloudplayer/"}
         %div{:class => 'btn btn-4'} Github Code
+      %br/
+      %span{:style => 'color: grey; font-size: 12px; padding-bottom: 10px;'} Click on image!
 
       #cloudchaser-carousel.carousel
-        %img{:src => "/images/cloudchaser-image3.png", :class => 'active'}/
-        %img{:src => "/images/cloudchaser-image1.png"}/
-        %img{:src => "/images/cloudchaser-image2.png"}/
-        %img{:src => "/images/cloudchaser-image4.png"}/
-      %img{:src => "/images/arrow1.png", :class => 'carousel-arrow arrow-3', :data => {:carousel => '#cloudchaser-carousel'}}/
+        %img{:src => "/images/cloudchaser-image3.png", :class => 'active', :data => { :carousel => '#cloudchaser-carousel'}}/
+        %img{:src => "/images/cloudchaser-image1.png", :data => { :carousel => '#cloudchaser-carousel'}}/
+        %img{:src => "/images/cloudchaser-image2.png", :data => { :carousel => '#cloudchaser-carousel'}}/
+        %img{:src => "/images/cloudchaser-image4.png", :data => { :carousel => '#cloudchaser-carousel'}}/
+
 
     %footer
       #contact-links
@@ -93,15 +97,23 @@
           %a{:href => "http://au.linkedin.com/in/xaunlopez"}
             %li
               %img{:src => "/images/linkedin.png", :alt => "linkedin"}/
+              %p LinkedIn
           %a{:href => "https://github.com/xaun"}
             %li
               %img{:src => "/images/github.png", :alt => "github"}/
+              %p GitHub
           %a{:href => "https://twitter.com/xaunlopez"}
             %li
               %img{:src => "/images/twitter.png", :alt => "twitter"}/
+              %p Twitter
           %a{:href => "mailto:xaunlopez@gmail.com?Subject=You%27re%20Awesome!"}
             %li
-              %img{:src => "/images/email.png", :alt => "email"}/
+              %img{:src => "/images/email2.png", :alt => "email"}/
+              %p Email
+          %a{:href => "#"}
+            %li
+              %img{:src => "/images/phone.png", :alt => "phone", :id => 'phone-icon'}/
+              %p Phone
 
 
 %script{:src => "javascripts/jquery-2.1.1.min.js"}
