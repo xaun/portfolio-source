@@ -15,51 +15,80 @@ nav {
   position: fixed;
   width: 100%;
   height: 90px;
-  border-bottom: 4px solid black;
+  // border-bottom: 4px solid black;
   text-align: right;
   z-index: 10;
   background-color: white;
+  -webkit-box-shadow: 0px 8px 25px -2px rgba(36,36,36,0.29);
+  -moz-box-shadow: 0px 8px 25px -2px rgba(36,36,36,0.29);
+  box-shadow: 0px 8px 25px -2px rgba(36,36,36,0.29);
+
+  @include respond-to(max-width, 550px) {
+
+  }
+
 
   h1 {
     position: absolute;
     margin-left: 20px;
     font-family: 'Poiret One', cursive;
     letter-spacing: 4px;
-    top: 25px;
+    top: -5px;
+    font-size: 54px;
 
-    @include device-respond-to {
-      font-size: 4em;
-      top: 7px;
+    @include respond-to(max-width, 975px) {
+      font-size: 34px;
+    }
+
+    @include respond-to(max-width, 865px) {
+      margin-left: 10px;
+    }
+
+    @include respond-to(max-width, 612px) {
+      font-size: 24px;
+      margin-left: 10px;
     }
   }
 
   ul {
     display: inline-block;
-    margin: 64px 30px 0 0;
-
-    @include respond-to(max-width, 480px) {
-      margin: 12px 10px 0 0;
-      border-left: 1px dashed black;
-      padding-left: 0px;
-    }
+    margin: 0px;
+    padding: 0px;
 
     li {
       display: inline-block;
       list-style: none;
-      padding-left: 40px;
+      padding: 35px 20px 0 20px;
+      font-family: 'Poiret One', cursive !important;
+      font-size: 1.3em;
+      height: 90px;
+      -o-transition:.2s;
+      -ms-transition:.2s;
+      -moz-transition:.2s;
+      -webkit-transition:.2s;
+      transition:.2s;
 
       &:hover {
-        text-decoration: underline;
+        background: rgba(255,255,255,1);
+        border-bottom: 3px solid black;
       }
 
-      @include respond-to(max-width, 480px) {
-        display: block;
-        padding: 15px 0 0 10px;
+      @include respond-to(max-width, 865px) {
+        padding: 35px 10px 0 10px;
       }
 
-      @include device-respond-to {
-        font-size: 26px;
-        margin-top: -45px;
+      @include respond-to(max-width, 750px) {
+        padding: 55px 10px 0 10px;
+      }
+
+      @include respond-to(max-width, 506px) {
+        font-size: 1.1em;
+        padding-top: 55px;
+      }
+
+      @include respond-to(max-width, 452px) {
+        font-size: 1em;
+        padding: 55px 7px 0 7px;
       }
     }
   }
@@ -100,7 +129,7 @@ a {
     position: absolute;
     padding: 90px 16%;
     // background-color: rgba(255,255,255,0.4);
-    background-color: rgba(255,255,255, 0.8);
+    background-color: rgba(255,255,255, 0.6);
 
     @include respond-to(max-width, 610px) {
       padding: 90px 7%;
@@ -134,9 +163,9 @@ a {
   // height: 400px;
   margin: auto;
   // margin-bottom: 20px;
-  -webkit-box-shadow: 0px 8px 34px -2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 8px 34px -2px rgba(0,0,0,0.75);
-  box-shadow: 0px 8px 34px -2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 8px 25px -2px rgba(36,36,36,0.75);
+  -moz-box-shadow: 0px 8px 25px -2px rgba(36,36,36,0.75);
+  box-shadow: 0px 8px 25px -2px rgba(36,36,36,0.75);
 }
 
 @mixin carousel-images {
@@ -145,10 +174,11 @@ a {
   top: 0;
   left: 0;
   height: auto;
-  -webkit-box-shadow: 0px 8px 34px -2px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 8px 34px -2px rgba(0,0,0,0.75);
-  box-shadow: 0px 8px 34px -2px rgba(0,0,0,0.75);
+  // -webkit-box-shadow: 0px 8px 34px -2px rgba(36,36,36,0.75);
+  // -moz-box-shadow: 0px 8px 34px -2px rgba(36,36,36,0.75);
+  // box-shadow: 0px 8px 34px -2px rgba(36,36,36,0.75);
   // width: 750px;
+  cursor: pointer;
 
   @include respond-to(max-width, 770px) {
     margin-left: 5px;
@@ -157,7 +187,10 @@ a {
 
 #projects {
   text-align: center;
-  border-top: 2px solid black;
+  -webkit-box-shadow: 5px 15px 22px 9px rgba(36,36,36,0.33);
+  -moz-box-shadow: 5px 15px 22px 9px rgba(36,36,36,0.33);
+  box-shadow: 5px 15px 22px 9px rgba(36,36,36,0.33);
+  // border-top: 2px solid black;
 
   p {
     margin: 15px 0;
@@ -181,15 +214,18 @@ a {
   }
 
   h3 {
-    margin-top: 10px;
+    font-family: 'Poiret One', cursive;
+    margin: 0;
+    padding-top: 20px;
+    text-decoration: underline;
+    font-size: 2.2em;
 
     @include device-respond-to {
-      font-size: 2.4em;
+      font-size: 2.6em;
     }
   }
 
   .btn {
-    border: 1px solid black;
     padding: 4px 15px;
     margin: 10px 0 25px 0;
     display: inline-block;
@@ -199,17 +235,29 @@ a {
     }
   }
 
-  .btn-1:hover {
-    background-color: rgb(234, 157, 115);
+  .btn-1 {
+    background-color: lighten(rgb(234, 157, 115), 15%);
+    &:hover {
+      background-color: saturate(rgb(234, 157, 115), 20%);
+    }
   }
-  .btn-2:hover {
-    background-color: rgb(236, 199, 110);
+  .btn-2 {
+    background-color: lighten(rgb(236, 199, 110), 15%);
+    &:hover {
+      background-color: saturate(rgb(236, 199, 110), 20%);
+    }
   }
-  .btn-3:hover {
-    background-color: rgb(243, 215, 150);
+  .btn-3 {
+    background-color: lighten(rgb(243, 215, 150), 15%);
+    &:hover {
+      background-color: saturate(rgb(243, 215, 150), 20%);
+    }
   }
-  .btn-4:hover {
-    background-color: rgb(143, 166, 112);
+  .btn-4 {
+    background-color: lighten(rgb(143, 166, 112), 15%);
+    &:hover {
+      background-color: saturate(rgb(143, 166, 112), 10%);
+    }
   }
 
   .btn.btn-5 {
@@ -217,19 +265,21 @@ a {
     bottom: -30px;
     right: 2%;
     margin-top: 40px;
+    background: lighten(rgba(106,160,152,1), 15%);
+
+    &:hover {
+      background: saturate(rgba(106,160,152,1), 10%);
+    }
   }
 
-  .btn.btn-5:hover {
-    background: rgba(106,160,152,1);
-  }
 
 // make an outer div for the image and set the arrow to be relative of the div.
 // reduce side of image and div on window resize: em;
 
   #storebuilder-description {
     position: relative;
-    border-bottom: 1px solid black;
-    padding-bottom: 20px;
+    // border-bottom: 1px solid black;
+    padding-bottom: 60px;
 
     .carousel-container {
       @include carousel-container;
@@ -247,8 +297,8 @@ a {
 
   #threedee-description {
     position: relative;
-    border-bottom: 1px solid black;
-    padding-bottom: 20px;
+    // border-bottom: 1px solid black;
+    padding-bottom: 60px;
 
       #threedee-carousel {
       @include carousel;
@@ -261,8 +311,8 @@ a {
 
   #cloudchaser-description {
     position: relative;
-    border-bottom: 1px solid black;
-    padding-bottom: 40px;
+    // border-bottom: 1px solid black;
+    padding-bottom: 90px;
 
       #cloudchaser-carousel {
       @include carousel;
@@ -281,19 +331,34 @@ footer {
   background-position: center;
   background-origin: center;
   background-attachment: fixed;
+  text-align: center;
+
 
   #contact-links {
-    position: relative;
     margin-top: 60px;
     color: black;
     display: inline-block;
+    background-color: rgba(255,255,255,0.4);
+    // padding: 10px;
+    width: 100%;
+
+    @include respond-to(max-width, 550px) {
+      margin-top: 90px;
+    }
 
     ul {
+      padding-left: 0;
     }
+
     li {
       list-style: none;
       display: inline-block;
-      padding: 40px 20px;
+      padding: 0 20px;
+      margin-top: 40px;
+
+      @include respond-to(max-width, 550px) {
+        padding: 5px;
+      }
     }
   }
 }

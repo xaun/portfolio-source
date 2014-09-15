@@ -4,10 +4,16 @@
   %ul
     / %li
     /   %a{:href => "#"} About
-    %li
-      %a{:href => "#", :id => 'projects-link'} Projects
-    %li
-      %a{:href => "#", :id => 'contact-link'} Contact
+    %a{:href => "#", :id => 'projects-link'}
+      %li Projects
+    %a{:href => "#", :id => 'storebuilder-link', :style => 'display: none;'}
+      %li StoreBuilder
+    %a{:href => "#", :id => 'threedee-link', :style => 'display: none;'}
+      %li Threedee
+    %a{:href => "#", :id => 'cloudchaser-link', :style => 'display: none;'}
+      %li CloudChaser
+    %a{:href => "#", :id => 'contact-link'}
+      %li Contact
 
 #main-container
   #margin-container
@@ -16,16 +22,16 @@
         %p Passionate about coding, audio & the future of technology.
         %p From interactive applications, to database design. I want to build technologies that either inspire people, or make their lives easier.
 
-        %p
-          %span Currently available for work in Sydney.
+        / %p
+        /   %span Currently available for work in Sydney.
 
   #projects
     #storebuilder-description
-      %h3 Store Builder
-      %p Store Builder (for lack of a better name), is a tool that allows you to build & manage your own online store.
+      %h3 StoreBuilder
+      %p StoreBuilder, is a tool that allows you to build & manage your own online store.
       %p Add & edit products, manage orders, add staff members, and send your store live into a responsive single-page application that saves cart items & guest information to Local Storage.
       %p
-        %small Ruby 50.1% | JavaScript 16.8% | CSS 33.1%
+        %small Ruby 50% | JavaScript 17% | CSS 33%
       %a{:href => "http://store-builder.herokuapp.com", :target => '_blank'}
         %div{:class => 'btn btn-1'} Build A Store
       %a{:href => "http://store-builder.herokuapp.com/stores/1", :target => '_blank'}
@@ -35,7 +41,6 @@
       %a{:href => "http://github.com/xaun/store-builder", :target => '_blank'}
         %div{:class => 'btn btn-4'} Github Code
       %br/
-      %span{:style => 'color: grey; font-size: 12px; padding-bottom: 10px;'} Click on image!
 
       .carousel-container
         #storebuilder-carousel.carousel
@@ -49,20 +54,23 @@
           %img{:src => "/images/storebuilder-image9.png", :data => { :carousel => '#storebuilder-carousel'}}/
           %img{:src => "/images/storebuilder-image10.png", :data => { :carousel => '#storebuilder-carousel'}}/
           %img{:src => "/images/storebuilder-image11.png", :data => { :carousel => '#storebuilder-carousel'}}/
-      %div{:class => 'btn btn-5', :data => {:next_element_id => '#threedee-description'}} Next Project
+      #storebuilder-detailed{:style => 'display: none; padding-top: 40px;'}
+        %p StoreBuilder is my final project that I did for General Assembly's Web Development Immersive course.
+        %p The idea behind this project choice was not to make an app that's particularly needed in the world, but more to do something that had lots of models, associations and also used BackboneJS to send the store live into a single-page app style.
+        %p You can check-out items, see the orders show up in the admin tool of the respective store. Payment processing is not integrated at this point - everything is free!
+      %div{:class => 'btn btn-5', :data => {:div_reveal => '#storebuilder-detailed'}} More Info
 
     #threedee-description
       %h3 Threedee
       %p Threedee is an Interactive 3D visualiser built with Three.JS & the Web Audio API.
       %p Featuring customisable graphical settings, mp3 drag & drop, and Soundcloud URL link.
       %p
-        %small Ruby 20.9% | JavaScript 67.6% | CSS 11.5%
+        %small Ruby 21% | JavaScript 68% | CSS 11%
       %a{:href => "http://tadx-threedee.herokuapp.com", :target => '_blank'}
         %div{:class => 'btn btn-1'} Rave Here
       %a{:href => "http://github.com/xaun/threedee", :target => '_blank'}
         %div{:class => 'btn btn-4'} Github Code
       %br/
-      %span{:style => 'color: grey; font-size: 12px; padding-bottom: 10px;'} Click on image!
 
       #threedee-carousel.carousel
         %img{:src => "/images/threedee-image1.png", :class => 'active', :data => { :carousel => '#threedee-carousel'}}/
@@ -72,51 +80,57 @@
         %img{:src => "/images/threedee-image5.png", :data => { :carousel => '#threedee-carousel'}}/
         %img{:src => "/images/threedee-image3.png", :data => { :carousel => '#threedee-carousel'}}/
         %img{:src => "/images/threedee-image2.png", :data => { :carousel => '#threedee-carousel'}}/
-      %div{:class => 'btn btn-5', :data => {:next_element_id => '#cloudchaser-description'}} Next Project
+      #threedee-detailed{:style => 'display: none; padding-top: 40px;'}
+        %p Threedee is a group collaberation for our second project of General Assembly's Web Development Immersive course.
+        %p My main role in the collaberation was to get the Web Audio API playing & analysing sound, mp3 drag & drop, Soundcloud URL, and UI. The rest of the group spent the whole week on 3D visuals.
+        %p This project was an exciting eye-opener to how awesome the browser has become!
+      %div{:class => 'btn btn-5', :data => {:div_reveal => '#threedee-detailed'}} More Info
 
     #cloudchaser-description
       %h3 CloudChaser
       %p CloudChaser is a Soundclound player for Music & Podcasts.
       %p Search for tracks, or artists, and save to your offline stash!
       %p
-        %small Ruby 77.3% | JavaScript 5.1% | CSS 17.6%
+        %small Ruby 77% | JavaScript 5% | CSS 18%
       %a{:href => "http://cloudchaser.herokuapp.com/", :target => '_blank'}
         %div{:class => 'btn btn-1'} Listen Here
       %a{:href => "http://https://github.com/xaun/soundcloudplayer/", :target => '_blank'}
         %div{:class => 'btn btn-4'} Github Code
       %br/
-      %span{:style => 'color: grey; font-size: 12px; padding-bottom: 10px;'} Click on image!
 
       #cloudchaser-carousel.carousel
         %img{:src => "/images/cloudchaser-image3.png", :class => 'active', :data => { :carousel => '#cloudchaser-carousel'}}/
         %img{:src => "/images/cloudchaser-image1.png", :data => { :carousel => '#cloudchaser-carousel'}}/
         %img{:src => "/images/cloudchaser-image2.png", :data => { :carousel => '#cloudchaser-carousel'}}/
         %img{:src => "/images/cloudchaser-image4.png", :data => { :carousel => '#cloudchaser-carousel'}}/
+      #cloudchaser-detailed{:style => 'display: none; padding-top: 40px;'}
+        %p CloudChaser is my first project that I built for General Assembly's Web Development Immersive course.
+        %p My vision for this website was born from frustration using the official Soundcloud website when searching for new music. I wanted to make the search results faster, lightweight and using a traditional itunes/finder table sorting system.
+      %div{:class => 'btn btn-5', :data => {:div_reveal => '#cloudchaser-detailed'}} More Info
 
-
-    %footer
-      #contact-links
-        %ul
-          %a{:href => "http://au.linkedin.com/in/xaunlopez", :target => '_blank'}
-            %li
-              %img{:src => "/images/linkedin.png", :alt => "linkedin"}/
-              %p LinkedIn
-          %a{:href => "https://github.com/xaun", :target => '_blank'}
-            %li
-              %img{:src => "/images/github.png", :alt => "github"}/
-              %p GitHub
-          %a{:href => "https://twitter.com/xaunlopez", :target => '_blank'}
-            %li
-              %img{:src => "/images/twitter.png", :alt => "twitter"}/
-              %p Twitter
-          %a{:href => "mailto:xaunlopez@gmail.com?Subject=You%27re%20Awesome!", :target => '_blank'}
-            %li
-              %img{:src => "/images/email2.png", :alt => "email"}/
-              %p Email
-          %a{:href => "#"}
-            %li
-              %img{:src => "/images/phone.png", :alt => "phone", :id => 'phone-icon'}/
-              %p Phone
+  %footer
+    #contact-links
+      %ul
+        %a{:href => "http://au.linkedin.com/in/xaunlopez", :target => '_blank'}
+          %li
+            %img{:src => "/images/linkedin.png", :alt => "linkedin"}/
+            %p LinkedIn
+        %a{:href => "https://github.com/xaun", :target => '_blank'}
+          %li
+            %img{:src => "/images/github.png", :alt => "github"}/
+            %p GitHub
+        %a{:href => "https://twitter.com/xaunlopez", :target => '_blank'}
+          %li
+            %img{:src => "/images/twitter.png", :alt => "twitter"}/
+            %p Twitter
+        %a{:href => "mailto:xaunlopez@gmail.com?Subject=You%27re%20Awesome!", :target => '_blank'}
+          %li
+            %img{:src => "/images/email2.png", :alt => "email"}/
+            %p Email
+        %a{:href => "#"}
+          %li
+            %img{:src => "/images/phone.png", :alt => "phone", :id => 'phone-icon'}/
+            %p Phone
 
 
 %script{:src => "javascripts/jquery-2.1.1.min.js"}

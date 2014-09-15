@@ -41,21 +41,6 @@ $(document).ready ->
     Carousel.init()
   )()
 
-  # Show projects button.
-  $('#threedee-description').hide()
-  $('#cloudchaser-description').hide()
-
-  $('.btn-5').on('click', (event) ->
-    event.preventDefault()
-    dataObject = $(event.target).data()
-    $nextElementID = dataObject['nextElementId']
-    $($nextElementID).show()
-    $(this).hide()
-    $(event.target).parent().css('padding-bottom', '40px')
-
-    $('body').animate({ scrollTop: $($nextElementID).offset().top - 90 }, 1000)
-  )
-
 
   ## Variables setup ##
   $windowHeight = $(window).height()
@@ -72,8 +57,48 @@ $(document).ready ->
 
   $('#about').css 'height', ($windowHeight)
 
-  $('#projects-link').off('click').on('click', ->
-    $("body").finish().animate({ scrollTop: $('#projects').offset().top - 90 }, 1000);
+
+  $('#projects-link').on('mouseover', ->
+    $('#storebuilder-link').fadeIn()
+    $('#threedee-link').fadeIn()
+    $('#cloudchaser-link').fadeIn()
+    $('#projects-link > li').css('border-bottom', '3px solid black')
+  )
+
+  $('nav').on('mouseleave', ->
+    $('#storebuilder-link').fadeOut()
+    $('#threedee-link').fadeOut()
+    $('#cloudchaser-link').fadeOut()
+    $('#projects-link > li').css('border-bottom', '')
+  )
+
+  $('.btn-5').on('click', (event) ->
+    event.preventDefault()
+    debugger;
+    if $(event.target).text() == 'More Info'
+      dataObject = $(event.target).data()
+      $divReveal = dataObject['divReveal']
+      $($divReveal).show()
+      $(event.target).text('Less Info')
+    else
+      dataObject = $(event.target).data()
+      $divReveal = dataObject['divReveal']
+      $($divReveal).hide()
+      $(event.target).text('More Info')
+
+    # $('body').animate({ scrollTop: $($divReveal).offset().top - 90 }, 1000)
+  )
+
+  $('#storebuilder-link').off('click').on('click', ->
+    $("body").finish().animate({ scrollTop: $('#storebuilder-description').offset().top - 90 }, 1000);
+  )
+
+  $('#threedee-link').off('click').on('click', ->
+    $("body").finish().animate({ scrollTop: $('#threedee-description').offset().top - 90 }, 1000);
+  )
+
+  $('#cloudchaser-link').off('click').on('click', ->
+    $("body").finish().animate({ scrollTop: $('#cloudchaser-description').offset().top - 90 }, 1000);
   )
 
   $('#contact-link').off('click').on('click', ->
